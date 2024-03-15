@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../custom-widget/custom-button.dart';
 import '../../custom-widget/custom-text-field.dart';
 
-class LoginPage extends StatelessWidget{
+class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
@@ -22,16 +20,16 @@ class LoginPage extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InputTextField(
-                textFieldKey: const Key("usernameField"),
+              const InputTextField(
+                textFieldKey: Key("usernameField"),
                 hint: "user name/ email",
               ),
               const SizedBox(
                 height: 10,
               ),
-              InputTextField(
-                textFieldKey: const Key("passwordField"),
-                hint: "Password",
+              const InputTextField(
+                textFieldKey: Key("passwordField"),
+                hint: "password",
               ),
               const SizedBox(
                 height: 15,
@@ -41,16 +39,42 @@ class LoginPage extends StatelessWidget{
                 buttonText: "Login",
                 onPress: () {},
               ),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 24, bottom: 16),
-                  child: Text(
-                    "create an account",
-                    textAlign: TextAlign.start,
-                    style: TextStyle(fontSize: 18),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Create an account",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color.fromARGB(
+                            203,
+                            11,
+                            49,
+                            94,
+                          )),
+                    ),
                   ),
-                ),
+                  const Spacer(),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Forgot password",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Color.fromARGB(
+                              203,
+                              11,
+                              49,
+                              94,
+                            )),
+                      ))
+                ],
               )
             ],
           ),
@@ -58,5 +82,4 @@ class LoginPage extends StatelessWidget{
       ),
     );
   }
-
 }
