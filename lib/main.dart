@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/presenters/login/login-page.dart';
+import 'package:shop/presenters/register/register-page.dart';
 
 void main() {
   runApp(const ShopApp());
@@ -81,6 +82,6 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginPage();
+    return const RegisterPage();
   }
 }
